@@ -33,6 +33,7 @@ To use JAXB in your project, follow these steps:
 1. **Add Maven Dependency**:
 
    ```xml
+Java 8:
    <dependency>
        <groupId>javax.xml.bind</groupId>
        <artifactId>jaxb-api</artifactId>
@@ -43,6 +44,18 @@ To use JAXB in your project, follow these steps:
        <artifactId>jaxb-impl</artifactId>
        <version>2.3.1</version>
    </dependency>
+
+Java SE 11 and later:
+    <dependency>
+       <groupId>jakarta.xml.bind</groupId>
+       <artifactId>jakarta.xml.bind-api</artifactId>
+       <version>4.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jaxb</groupId>
+      <artifactId>jaxb-runtime</artifactId>
+       <version>4.0.5</version>
+    </dependency>
    ```
 
 2. **Import JAXB Classes**:
@@ -67,10 +80,6 @@ public class Employee {
     private int id;
 
     // Getters and setters
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
 }
 
 // Marshalling Code
